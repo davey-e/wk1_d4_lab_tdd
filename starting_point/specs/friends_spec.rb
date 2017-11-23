@@ -94,7 +94,12 @@ class TestFriends < MiniTest::Test
   # 4. For a given person, add a new name to their list of friends
   # (hint: Add a new string to the friends array, then test for the length of the array, not the return value of your add_friend method)
 
-
+def test_check_friend_added
+  friends = @person1[:friends]
+  add_friend(@person1,"Ross")
+  friends_array_length = friends.length
+  assert_equal(5, friends_array_length)
+end
   # 5. For a given person, remove a specific name from their list of friends
   # (hint: Same as above, testing for the length of the array should be sufficient)
 

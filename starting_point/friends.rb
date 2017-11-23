@@ -13,3 +13,7 @@ def food_check(person, food)
   end
   return false
 end
+
+def add_friend(person, friend)
+  person[:friends].push(friend)
+end
